@@ -17,7 +17,7 @@ import ITarefa from '@/interface/ITarefa';
 
 
 export default defineComponent({
-  name: 'App',
+  name: 'AppTarefas',
   components: {
     Formulario,
     Tarefa,
