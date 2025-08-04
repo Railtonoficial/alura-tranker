@@ -1,10 +1,21 @@
 <template>
   <Formulario @aoSalvarTarefa="salvarTarefa" />
   <div class="lista">
-    <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" @aoTarefaClicada="selecionarTarefa" />
     <Box v-if="semTarefas">
       Você não está muito produtivo hoje :(
     </Box>
+    <div class="field">
+      <p class="control has-icons-left has-icons-rigth">
+        <input class="input" type="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-rigth">
+          <i class="fas fa-check"></i>
+        </span>
+      </p>
+    </div>
+    <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" @aoTarefaClicada="selecionarTarefa" />
     <div class="modal" :class="{ 'is-active' : tarefaSelecionada }" v-if="tarefaSelecionada">
       <div class="modal-background"></div>
       <div class="modal-card">
