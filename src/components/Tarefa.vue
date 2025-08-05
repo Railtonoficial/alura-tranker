@@ -1,6 +1,6 @@
 <template>
   <Box>
-    <div class="columns clicavel" @click="tarefaClicada"">
+    <div class="columns clicavel" @click="tarefaClicada">
       <div class="column is-4">{{ tarefa.descricao || 'Tarefa sem descrição' }}</div>
       <div class="column is-3">
         {{ tarefa.projeto?.nome || 'N/D' }}
